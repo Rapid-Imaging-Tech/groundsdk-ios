@@ -992,7 +992,6 @@
 				9BBAAFC12215B48B00E1E5BF /* LedsController.swift */,
 				F828CB3E1E081B6400270F73 /* Mappers */,
 				F8D82B541E00628D0047ABF1 /* MapperVirtualGamepad.swift */,
-				9BAF3DDC228D488F00234BE6 /* OnboardTrackerController.swift */,
 				9B40FAD0215E557300CF6690 /* PreciseHomeController.swift */,
 				02CE4466208E0038007B9F9F /* Sc3Gamepad.swift */,
 				9BF5447C22B772DC00452895 /* SkyControllerCopilot.swift */,
@@ -1204,7 +1203,6 @@
 				9B31E00521C93E9A006F389E /* ThermalControllerTests.swift */,
 				9B73BDC7221707C2008DA1F7 /* LedsControllerTests.swift */,
 				9B5D350923CF54090098016D /* BatteryGaugeUpdaterControllerTests.swift */,
-				686583C2231EA07400272549 /* SykControllerRadioControlTests.swift */, peripheral
 			);
 			path = Peripheral;
 			sourceTree = "<group>";
@@ -1759,6 +1757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1813,6 +1812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1829,7 +1829,7 @@
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1855,7 +1855,7 @@
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

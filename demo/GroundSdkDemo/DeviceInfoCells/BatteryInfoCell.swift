@@ -57,9 +57,9 @@ class BatteryInfoCell: InstrumentProviderContentCell {
                     self.cycleCountLabel.text = "-"
                 }
                 if let serial = batteryInfo.serial {
-                    self.serialLabel.text = "\(serial)"
+                    self.serialLabel?.text = "\(serial)"
                 } else {
-                    self.serialLabel.text = "-"
+                    self.serialLabel?.text = "-"
                 }
                 self.show()
             } else {

@@ -41,6 +41,9 @@
 		02F39FFB20AC22DA0058890D /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F39FFA20AC22DA0058890D /* UserAccountViewController.swift */; };
 		02FC4C7F2024C40100D76490 /* FlightMeterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC4C7E2024C40100D76490 /* FlightMeterCell.swift */; };
 		1D2194E81EE83883005A6883 /* CrashReportDownloaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2194E71EE83883005A6883 /* CrashReportDownloaderCell.swift */; };
+		2DA6F5132569F72300963A1D /* settings.ini in Resources */ = {isa = PBXBuildFile; fileRef = 2DA6F5122569F72300963A1D /* settings.ini */; };
+		2DA6F5152569F76400963A1D /* arial.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA6F5142569F76400963A1D /* arial.png */; };
+		2DA6F5172569F7FE00963A1D /* arial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DA6F5162569F7FE00963A1D /* arial.json */; };
 		37CCBE331C8A2A2300AEC30E /* ArsdkEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CCBE2D1C8A2A0800AEC30E /* ArsdkEngine.framework */; };
 		37CCBE341C8A2A2300AEC30E /* ArsdkEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37CCBE2D1C8A2A0800AEC30E /* ArsdkEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37CCBE351C8A2A2300AEC30E /* GroundSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CCBE2E1C8A2A0800AEC30E /* GroundSdk.framework */; };
@@ -255,6 +258,9 @@
 		02F39FFA20AC22DA0058890D /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
 		02FC4C7E2024C40100D76490 /* FlightMeterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMeterCell.swift; sourceTree = "<group>"; };
 		1D2194E71EE83883005A6883 /* CrashReportDownloaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashReportDownloaderCell.swift; sourceTree = "<group>"; };
+		2DA6F5122569F72300963A1D /* settings.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = settings.ini; sourceTree = "<group>"; };
+		2DA6F5142569F76400963A1D /* arial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arial.png; sourceTree = "<group>"; };
+		2DA6F5162569F7FE00963A1D /* arial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arial.json; sourceTree = "<group>"; };
 		37CCBE2D1C8A2A0800AEC30E /* ArsdkEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ArsdkEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CCBE2E1C8A2A0800AEC30E /* GroundSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GroundSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CCBE2F1C8A2A0800AEC30E /* SdkCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SdkCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,6 +441,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA6F5112569F71700963A1D /* LFClient Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2DA6F5122569F72300963A1D /* settings.ini */,
+				2DA6F5142569F76400963A1D /* arial.png */,
+				2DA6F5162569F7FE00963A1D /* arial.json */,
+			);
+			path = "LFClient Assets";
+			sourceTree = "<group>";
+		};
 		712A9F5822045EC000BD4DFC /* Replay */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +683,7 @@
 		7CA1C9931C807D5000FE9ED4 /* GroundSdkDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2DA6F5112569F71700963A1D /* LFClient Assets */,
 				7CA1C9A01C807D5000FE9ED4 /* Info.plist */,
 				7CA1C9941C807D5000FE9ED4 /* AppDelegate.swift */,
 				7C6BD87A1D47626A005D415A /* BoolSettingView.swift */,
@@ -761,7 +778,7 @@
 				TargetAttributes = {
 					7CA1C9901C807D5000FE9ED4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = EA523KQ2D9;
+						DevelopmentTeam = CN7BT99T2B;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -795,6 +812,8 @@
 				F73982FB247D1CA900B5E5E6 /* BlendedThermalCamera.storyboard in Resources */,
 				027364AA209753AA00C16142 /* Geofence.storyboard in Resources */,
 				029075FD1FE2E43A00DED655 /* GuidedPiloting.storyboard in Resources */,
+				2DA6F5152569F76400963A1D /* arial.png in Resources */,
+				2DA6F5132569F72300963A1D /* settings.ini in Resources */,
 				7C5C42F91E00583A00B8829C /* HudCopter.storyboard in Resources */,
 				7C816A851CF82CB300393534 /* NumSettingView.xib in Resources */,
 				02CE4476208E1A2B007B9F9F /* SkyCtrl3AxesSetup.storyboard in Resources */,
@@ -821,6 +840,7 @@
 				70139B4D23181CCD0014F200 /* PilotingControl.storyboard in Resources */,
 				F8A3D0DB2052C52100AF0126 /* Gimbal.storyboard in Resources */,
 				7C7406AD2051926300D1CD78 /* Antiflicker.storyboard in Resources */,
+				2DA6F5172569F7FE00963A1D /* arial.json in Resources */,
 				7C5C433C1E014E3900B8829C /* ReturnHomePilotingItf.storyboard in Resources */,
 				7C5C42FC1E0058C000B8829C /* ManualCopterPilotingItf.storyboard in Resources */,
 				F828A4B41F01591E00431860 /* WifiAccessPoint.storyboard in Resources */,
@@ -1293,6 +1313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1344,6 +1365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1360,7 +1382,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EA523KQ2D9;
+				DEVELOPMENT_TEAM = CN7BT99T2B;
 				INFOPLIST_FILE = GroundSdkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1377,7 +1399,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EA523KQ2D9;
+				DEVELOPMENT_TEAM = CN7BT99T2B;
 				INFOPLIST_FILE = GroundSdkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
