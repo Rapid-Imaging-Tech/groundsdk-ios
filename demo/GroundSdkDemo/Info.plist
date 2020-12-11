@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -19,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(APP_VERSION)</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>$(APP_BUILD)</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GroundSdk</key>
 	<dict>
 		<key>AppDefaults</key>
@@ -31,21 +29,23 @@
 			<key>anafi4k</key>
 			<string>anafi4k_app_defaults</string>
 		</dict>
+		<key>ApplicationKey</key>
+		<string>$(GSDK_APPKEY)</string>
 		<key>BlackBox</key>
 		<false/>
+		<key>BlackBoxQuotaMb</key>
+		<integer>0</integer>
 		<key>BlackboxPublicFolder</key>
 		<string></string>
-		<key>UsbDebug</key>
-		<true/>
-		<key>BlackBoxQuotaMb</key>
+		<key>CrashReportQuotaMb</key>
+		<integer>0</integer>
+		<key>FirmwareServer</key>
+		<string>$(GSDK_INTERNAL_UPDATE_URL)</string>
+		<key>FlightDataQuotaMb</key>
 		<integer>0</integer>
 		<key>FlightLogQuotaMb</key>
 		<integer>0</integer>
-		<key>FlightDataQuotaMb</key>
-		<integer>0</integer>
 		<key>GutmaLogQuotaMb</key>
-		<integer>0</integer>
-		<key>CrashReportQuotaMb</key>
 		<integer>0</integer>
 		<key>SupportedDevices</key>
 		<array>
@@ -56,19 +56,21 @@
 			<string>skyCtrl3</string>
 			<string>skyCtrlUA</string>
 		</array>
-		<key>FirmwareServer</key>
-		<string>$(GSDK_INTERNAL_UPDATE_URL)</string>
-		<key>ApplicationKey</key>
-		<string>$(GSDK_APPKEY)</string>
+		<key>UsbDebug</key>
+		<true/>
 	</dict>
 	<key>LSApplicationCategoryType</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Add photos and videos</string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>camera authorization - for HMD</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your app uses Location for navigation and followMe functions</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Add photos and videos</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -97,7 +99,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>camera authorization - for HMD</string>
 </dict>
 </plist>
