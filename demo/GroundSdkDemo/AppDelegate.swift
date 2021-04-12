@@ -38,8 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let svc = self.window?.rootViewController as? UISplitViewController {
-            svc.preferredDisplayMode = .allVisible
+            svc.preferredDisplayMode = .oneOverSecondary
             svc.delegate = self
+            if(svc.isCollapsed){
+                print("collapsed")
+            }
+            //svc.primaryBackgroundStyle = .sidebar
         }
         return true
     }

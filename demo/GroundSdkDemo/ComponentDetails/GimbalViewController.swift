@@ -32,6 +32,46 @@ import GroundSdk
 
 class GimbalViewController: UITableViewController, DeviceViewController {
 
+//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//                if let touch = touches.first {
+//                    let currentPoint = touch.locationInView(self)
+//                    // do something with your currentPoint
+//                }
+//
+//                self.backgroundColor = UIColor.magentaColor()//Color when UIView is clicked.
+//            }
+//
+//            override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//                if let touch = touches.first {
+//                    let currentPoint = touch.locationInView(self)
+//                    // do something with your currentPoint
+//                }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touches moved")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        print("view clicked")
+//        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = self.view.frame
+//
+//        self.view.insertSubview(blurEffectView, at: 0)
+//        self.view.de
+         //if let touch = touches.first {
+//            if touch.view == self.redView {
+//                tapOnredViewTapped()
+//            } else if touch.view == self.orangeView {
+//                orangeViewTapped()
+//            } else if touch.view == self.greenView {
+//                greenViewTapped()
+//            } else {
+//                return
+//            }
+       // }
+
+    }
     private let groundSdk = GroundSdk()
     private var droneUid: String?
     private var peripheralProvider: PeripheralProvider?
@@ -98,6 +138,12 @@ class GimbalViewController: UITableViewController, DeviceViewController {
                 }
             }
         }
+//        
+//        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = self.view.frame
+//
+//        self.view.insertSubview(blurEffectView, at: 0)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

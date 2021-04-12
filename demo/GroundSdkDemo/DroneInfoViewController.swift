@@ -139,6 +139,11 @@ class DroneInfoViewController: UIViewController, UITableViewDelegate, UITableVie
             addCell("logControl", section: peripheralSection)
             addCell("certificateUploader", section: peripheralSection)
         }
+//        let blurEffect = UIBlurEffect(style: .regular)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = self.view.frame
+//
+//        self.view.insertSubview(blurEffectView, at: 0)
     }
 
     private func addCell(_ identifier: String, section: Int) {

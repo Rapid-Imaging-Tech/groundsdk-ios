@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h54-hR-FRY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h54-hR-FRY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,7 +154,7 @@
                         <viewControllerLayoutGuide type="top" id="i0u-KC-1Le"/>
                         <viewControllerLayoutGuide type="bottom" id="Q81-r1-NMQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ig5-BX-zQc">
+                    <view key="view" opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" id="ig5-BX-zQc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="8000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -5585,7 +5585,7 @@
                         <outlet property="modelLabel" destination="dPM-kI-P76" id="0zK-bW-kU3"/>
                         <outlet property="stateLabel" destination="MtR-t0-B0Q" id="ygm-IM-JOQ"/>
                         <outlet property="tableView" destination="5rw-kG-qDa" id="2gV-Hw-78D"/>
-                        <segue destination="RDI-1d-ybu" kind="presentation" identifier="CopterHudSegue" id="6L7-cy-Hma"/>
+                        <segue destination="RDI-1d-ybu" kind="showDetail" identifier="CopterHudSegue" id="6L7-cy-Hma"/>
                         <segue destination="VRj-vY-IgT" kind="showDetail" identifier="showDefault" id="VEq-c5-4Ce"/>
                         <segue destination="WVA-Ym-Aoy" kind="showDetail" identifier="1StepMagnetoCalibSegue" id="mjk-xT-uxQ"/>
                         <segue destination="4dR-Jb-cmI" kind="showDetail" identifier="3StepMagnetoCalibSegue" id="80O-nf-g6e"/>
@@ -7098,7 +7098,9 @@
         <!--HudCopter-->
         <scene sceneID="mfs-9z-jBj">
             <objects>
-                <viewControllerPlaceholder storyboardName="HudCopter" id="RDI-1d-ybu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HudCopter" id="RDI-1d-ybu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rj0-dC-Afu"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewY-kB-2w3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213" y="-1276"/>
@@ -8020,15 +8022,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VEq-c5-4Ce"/>
+        <segue reference="hQl-oG-vOQ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

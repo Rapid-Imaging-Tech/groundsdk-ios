@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fdd-D6-890">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fdd-D6-890">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,9 +16,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zAo-lA-FIs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MYM-6X-euu">
-                            <rect key="frame" x="0.0" y="103" width="375" height="288"/>
+                            <rect key="frame" x="0.0" y="103.5" width="375" height="288"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <string key="text">No video file available. Open drone media store  and download files in "Document".
  </string>
@@ -27,14 +28,14 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoFile" id="AAF-0r-889" customClass="VideoFileListCell" customModule="GroundSdkDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="47.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AAF-0r-889" id="MlH-Zu-JgD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-tb-Tzg">
-                                            <rect key="frame" x="18" y="13" width="339" height="21"/>
+                                            <rect key="frame" x="18" y="13" width="339" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -98,6 +99,26 @@
                             <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10o-Oe-Ebf" customClass="GSStreamView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </glkView>
+                            <tableView opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="jXg-gy-eHI">
+                                <rect key="frame" x="0.0" y="73.5" width="300" height="500"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="iyc-ca-Yqc"/>
+                                    <constraint firstAttribute="width" constant="300" id="tBN-Ga-ppg"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="43.5" id="yQw-sE-jAW">
+                                        <rect key="frame" x="0.0" y="55.5" width="300" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yQw-sE-jAW" id="LEC-3x-Jq8">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ayi-Mx-eHk">
                                 <rect key="frame" x="6" y="573" width="371" height="31"/>
                                 <connections>
@@ -133,13 +154,16 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bci-WT-eDc"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y5s-Lg-ytV" firstAttribute="leading" secondItem="10o-Oe-Ebf" secondAttribute="leading" id="08Y-ta-4w6"/>
                             <constraint firstItem="10o-Oe-Ebf" firstAttribute="top" secondItem="zXL-K7-eLO" secondAttribute="top" id="1Ly-o2-DWB"/>
                             <constraint firstItem="10o-Oe-Ebf" firstAttribute="leading" secondItem="zXL-K7-eLO" secondAttribute="leading" id="4I0-qj-UKR"/>
+                            <constraint firstItem="jXg-gy-eHI" firstAttribute="leading" secondItem="bci-WT-eDc" secondAttribute="leading" id="Cac-tU-yGU"/>
                             <constraint firstItem="y5s-Lg-ytV" firstAttribute="trailing" secondItem="10o-Oe-Ebf" secondAttribute="trailing" id="JoN-LT-wTG"/>
                             <constraint firstItem="y5s-Lg-ytV" firstAttribute="top" secondItem="Ayi-Mx-eHk" secondAttribute="bottom" id="Jwo-sd-dXu"/>
+                            <constraint firstItem="jXg-gy-eHI" firstAttribute="centerY" secondItem="zXL-K7-eLO" secondAttribute="centerY" id="WsF-0D-m81"/>
                             <constraint firstItem="Ayi-Mx-eHk" firstAttribute="top" secondItem="G9Y-68-ZTc" secondAttribute="bottom" id="YqZ-Eb-vsF"/>
                             <constraint firstItem="Ayi-Mx-eHk" firstAttribute="top" secondItem="L31-2I-MH0" secondAttribute="bottom" id="ZA4-mf-3KN"/>
                             <constraint firstItem="G9Y-68-ZTc" firstAttribute="leading" secondItem="zXL-K7-eLO" secondAttribute="leadingMargin" id="acu-R8-Xna"/>
@@ -151,7 +175,6 @@
                             <constraint firstAttribute="trailing" secondItem="Ayi-Mx-eHk" secondAttribute="trailing" id="uCA-ht-uYc"/>
                             <constraint firstAttribute="trailing" secondItem="10o-Oe-Ebf" secondAttribute="trailing" id="zVp-Mq-d2E"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bci-WT-eDc"/>
                     </view>
                     <connections>
                         <outlet property="durationLabel" destination="L31-2I-MH0" id="6zw-7P-gT7"/>
@@ -159,12 +182,21 @@
                         <outlet property="positionLabel" destination="G9Y-68-ZTc" id="4Bg-28-4Vn"/>
                         <outlet property="stopBtn" destination="4fp-K0-Zek" id="lAg-Un-jTC"/>
                         <outlet property="streamView" destination="10o-Oe-Ebf" id="ita-FA-mPl"/>
+                        <outlet property="tableView" destination="jXg-gy-eHI" id="hrb-jl-Jt9"/>
                         <outlet property="timeSlider" destination="Ayi-Mx-eHk" id="JoU-HA-8PI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62g-Qa-SpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="282"/>
+            <point key="canvasLocation" x="96.799999999999997" y="281.10944527736132"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
