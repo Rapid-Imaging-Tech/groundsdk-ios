@@ -162,8 +162,6 @@ class CopterHudViewController: UIViewController, DeviceViewController {
         var lon1:Float = 0.0
         
         
-        //LFMessageHandler().vcCheckLatLonReady(:lat, Lon:lon)
-        //LFMessageHandler().vcCheckLatLonReadyLat(T##lat: UnsafeMutablePointer<Float>!##UnsafeMutablePointer<Float>!, Lon: lon)
         let isready = LFMessageHandler().vcCheckLatLonReadyLat(&lat1, lon: &lon1)
         if counter > 5 || isready{
             //if isready, then lat lon is the point we wanna look up

@@ -69,6 +69,9 @@
 		7CF074011DE8454600C75ACD /* PompBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF073FE1DE8454600C75ACD /* PompBuffer.m */; };
 		845A3D9A239692C500EC3871 /* FileConverterAPI.mm in Sources */ = {isa = PBXBuildFile; fileRef = 845A3D99239692C500EC3871 /* FileConverterAPI.mm */; };
 		849ADAF1239AA6A900D9F722 /* FileConverterAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 845A3D9B239692F000EC3871 /* FileConverterAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9102920A25C8D8C900853FED /* libmux.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9102920925C8D8AF00853FED /* libmux.a */; };
+		9194C0F025C8E19200DBEC1B /* libboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9194C0EE25C8E17200DBEC1B /* libboost.a */; };
+		9194C19C25C8E53500DBEC1B /* SmartCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9194C0F125C8E1A400DBEC1B /* SmartCam.framework */; };
 		9B11B49B22243BED00C5408E /* SdkCore+Sink.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B11B49922243BED00C5408E /* SdkCore+Sink.m */; };
 		9B11B49C22243BED00C5408E /* SdkCore+Sink.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B11B49A22243BED00C5408E /* SdkCore+Sink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B3AD49622256F9000955E85 /* SdkCore+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3AD49422256F9000955E85 /* SdkCore+Frame.m */; };
@@ -197,6 +200,10 @@
 		7CF073FE1DE8454600C75ACD /* PompBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PompBuffer.m; sourceTree = "<group>"; };
 		845A3D99239692C500EC3871 /* FileConverterAPI.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FileConverterAPI.mm; sourceTree = "<group>"; };
 		845A3D9B239692F000EC3871 /* FileConverterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileConverterAPI.h; sourceTree = "<group>"; };
+		9102920925C8D8AF00853FED /* libmux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmux.a; path = "../../../out/groundsdk-ios/sdk/usr/lib/libmux.a"; sourceTree = "<group>"; };
+		9194C0EE25C8E17200DBEC1B /* libboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost.a; path = "../../../../../ofxiOSBoost 2/libs/boost/ios/libboost.a"; sourceTree = "<group>"; };
+		9194C0EF25C8E18100DBEC1B /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libs; path = "../../../../../ofxiOSBoost 2/libs"; sourceTree = "<group>"; };
+		9194C0F125C8E1A400DBEC1B /* SmartCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SmartCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B11B49922243BED00C5408E /* SdkCore+Sink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SdkCore+Sink.m"; path = "Stream/SdkCore+Sink.m"; sourceTree = SOURCE_ROOT; };
 		9B11B49A22243BED00C5408E /* SdkCore+Sink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SdkCore+Sink.h"; path = "Stream/SdkCore+Sink.h"; sourceTree = SOURCE_ROOT; };
 		9B3AD49422256F9000955E85 /* SdkCore+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SdkCore+Frame.m"; sourceTree = "<group>"; };
@@ -255,7 +262,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9194C19C25C8E53500DBEC1B /* SmartCam.framework in Frameworks */,
+				9194C0F025C8E19200DBEC1B /* libboost.a in Frameworks */,
 				1DA7BAB6202A04FE006FA9A9 /* VideoToolbox.framework in Frameworks */,
+				9102920A25C8D8C900853FED /* libmux.a in Frameworks */,
 				1DA7BAB4202A04EC006FA9A9 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +294,10 @@
 		1DA7BAB2202A04EC006FA9A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9194C0F125C8E1A400DBEC1B /* SmartCam.framework */,
+				9194C0EF25C8E18100DBEC1B /* libs */,
+				9194C0EE25C8E17200DBEC1B /* libboost.a */,
+				9102920925C8D8AF00853FED /* libmux.a */,
 				1DA7BAB5202A04FE006FA9A9 /* VideoToolbox.framework */,
 				1DA7BAB3202A04EC006FA9A9 /* CoreMedia.framework */,
 			);
@@ -976,9 +990,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+				);
 				INFOPLIST_FILE = SdkCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+					"$(inherited)",
+					"$(PREBUILT_DIR)/lib",
+					"\"$(SRCROOT)/../../../../../ofxiOSBoost 2/libs/boost/ios\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.parrot.drone.SdkCore;
 				PRODUCT_NAME = SdkCore;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1001,9 +1028,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+				);
 				INFOPLIST_FILE = SdkCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+					"$(inherited)",
+					"$(PREBUILT_DIR)/lib",
+					"\"$(SRCROOT)/../../../../../ofxiOSBoost 2/libs/boost/ios\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/groundsdk-eczyhgntyomgodgbhzrzbwqmijcq/Build/Products/Debug-iphoneos\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.parrot.drone.SdkCore;
 				PRODUCT_NAME = SdkCore;
 				PROVISIONING_PROFILE_SPECIFIER = "";
